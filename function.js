@@ -1,6 +1,18 @@
+let date = new Date();
+/**
+ * marriage age calculator
+ * @param {*} name 
+ * @param {*} year 
+ * @param {*} gender 
+ * @returns 
+ */
 function mage(name, year, gender) {
-    let date = new Date();
+    
     let age = date.getFullYear() - year;
+
+    if (year > date.getFullYear()) {
+        return `<p class="alert alert-danger">Please provide accurate information.</p>`
+    }
 
     if ( age >= 18 && gender == 'female' ) {
 
